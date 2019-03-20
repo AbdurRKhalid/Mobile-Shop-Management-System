@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="814.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mobile.shop.management.system.project.database.ReportsWindowController">
+   <children>
+      <Label layoutX="231.0" layoutY="66.0" text="Today's Earnings" />
+      <Label fx:id="dailySalesLabel" layoutX="619.0" layoutY="66.0" text="500 Rs" />
+      <Label layoutX="214.0" layoutY="108.0" text="Current Week's Earnings" />
+      <Label fx:id="weeklySalesLabel" layoutX="616.0" layoutY="108.0" text="1500 Rs" />
+      <Label layoutX="211.0" layoutY="143.0" text="Current Month's Earnings" />
+      <Label fx:id="monthlySalesLabel" layoutX="616.0" layoutY="143.0" text="8000 Rs" />
+      <BarChart fx:id="salesBarGraph" layoutX="24.0" layoutY="182.0" prefHeight="520.0" prefWidth="880.0" style="-fx-font-size: 20;">
+        <xAxis>
+          <CategoryAxis fx:id="monthAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="saleAxis" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

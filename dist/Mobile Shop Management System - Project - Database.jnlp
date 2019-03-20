@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Mobile Shop Management System - Project - Database.jnlp">
+  <information>
+    <title>Mobile Shop Management System - Project - Database</title>
+    <vendor>hp</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\jfoenix-8.0.7.jar" size="2631271" download="eager" />
+    <jar href="lib\mssql-jdbc-7.0.0.jre8.jar" size="1166239" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Mobile Shop Management System - Project - Database" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="mobile.shop.management.system.project.database.MobileShopManagementSystemProjectDatabase"  name="Mobile Shop Management System - Project - Database" />
+  <update check="always"/>
+</jnlp>

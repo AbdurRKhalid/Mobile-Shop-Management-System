@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="814.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mobile.shop.management.system.project.database.EasyLoadWindowController">
+   <children>
+      <Label layoutX="118.0" layoutY="46.0" text="Select Company" />
+      <Label layoutX="330.0" layoutY="48.0" text="Stock Left" />
+      <Label fx:id="stockLabel" layoutX="337.0" layoutY="74.0" />
+      <Label layoutX="530.0" layoutY="47.0" text="Enter No" />
+      <JFXTextField fx:id="easyLoadNumber" focusColor="#4db8ff" layoutX="464.0" layoutY="69.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="725.0" layoutY="48.0" text="Enter Amount " />
+      <JFXTextField fx:id="easyLoadAmount" focusColor="#4db8ff" layoutX="696.0" layoutY="69.0" />
+      <Label layoutX="296.0" layoutY="129.0" text="Select Date" />
+      <JFXDatePicker fx:id="easyLoadDate" defaultColor="#4db8ff" layoutX="241.0" layoutY="153.0" />
+      <Label layoutX="601.0" layoutY="129.0" text="Select Time" />
+      <JFXTimePicker fx:id="easyLoadTime" defaultColor="#4db8ff" layoutX="546.0" layoutY="153.0" />
+      <JFXButton fx:id="addEasyLoadButton" buttonType="RAISED" layoutX="390.0" layoutY="193.0" onAction="#addNewEasyLoadRecrod" prefHeight="71.0" prefWidth="148.0" ripplerFill="WHITE" style="-fx-background-color: #4db8ff;" text="Add Easy Load" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXRadioButton fx:id="searchByNumberRadioButton" layoutX="192.0" layoutY="287.0" style="-jfx-selected-color: #4db8ff;" text="Search By Number">
+         <toggleGroup>
+            <ToggleGroup fx:id="easyLoad_Group" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="searchByCompanyByRadioButton" layoutX="601.0" layoutY="287.0" style="-jfx-selected-color: #4db8ff;" text="Search By Company" toggleGroup="$easyLoad_Group" />
+      <JFXButton fx:id="searchRecordButton" buttonType="RAISED" layoutX="426.0" layoutY="358.0" onAction="#searchEasyLoadRecord" ripplerFill="WHITE" style="-fx-background-color: #4db8ff;" text="Search" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="easyLoadSearchText" focusColor="#4db8ff" layoutX="397.0" layoutY="322.0" promptText="Enter Text to Search" />
+      <JFXTreeTableView fx:id="easyLoadTable" layoutX="9.0" layoutY="407.0" prefHeight="400.0" prefWidth="909.0" stylesheets="@tableStyling.css" />
+      <ChoiceBox fx:id="companySelector" layoutX="86.0" layoutY="69.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

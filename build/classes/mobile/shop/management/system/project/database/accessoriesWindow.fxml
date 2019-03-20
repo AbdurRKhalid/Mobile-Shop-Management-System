@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="814.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mobile.shop.management.system.project.database.AccessoriesWindowController">
+   <children>
+      <Label layoutX="85.0" layoutY="35.0" text="Select Item Type" />
+      <Label layoutX="316.0" layoutY="34.0" text="Enter Model" />
+      <Label layoutX="709.0" layoutY="35.0" text="Enter No of Units" />
+      <JFXTextField fx:id="noOfUnitsTextGetter" focusColor="#4db8ff" layoutX="688.0" layoutY="52.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXTextField>
+      <JFXTextField fx:id="modelTextGetter" focusColor="#4db8ff" layoutX="281.0" layoutY="51.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXTextField>
+      <Label layoutX="505.0" layoutY="35.0" text="Enter Price Per Unit" />
+      <JFXTextField fx:id="pricePerUnitTextGetter" focusColor="#4db8ff" layoutX="489.0" layoutY="52.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXTextField>
+      <JFXDatePicker fx:id="dateSelectore" defaultColor="#4db8ff" layoutX="408.0" layoutY="121.0" />
+      <Label layoutX="454.0" layoutY="104.0" text="Select Date" />
+      <JFXButton fx:id="addAccessoriesStockButton" buttonType="RAISED" layoutX="405.0" layoutY="166.0" onAction="#updateOrAddNewAccessoryStock" prefHeight="76.0" prefWidth="158.0" ripplerFill="WHITE" style="-fx-background-color: #4db8ff;" text="Add Stock" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXRadioButton fx:id="searchByTypeRadioButton" layoutX="241.0" layoutY="259.0" style="-jfx-selected-color: #4db8ff;" text="Search By Type">
+         <toggleGroup>
+            <ToggleGroup fx:id="accessories_Group" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="searchByPricePerUnitRadioButton" layoutX="556.0" layoutY="259.0" style="-jfx-selected-color: #4db8ff;" text="Search By Price Per Unit" toggleGroup="$accessories_Group" />
+      <Label layoutX="421.0" layoutY="299.0" text="Enter Text to Search" />
+      <JFXTextField fx:id="searchTextAccessory" focusColor="#4db8ff" layoutX="361.0" layoutY="307.0" prefHeight="25.0" prefWidth="226.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXTextField>
+      <JFXButton fx:id="searchButton" buttonType="RAISED" layoutX="421.0" layoutY="339.0" onAction="#accessorySearch" prefHeight="41.0" prefWidth="107.0" ripplerFill="WHITE" style="-fx-background-color: #4db8ff;" text="Search" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXTreeTableView fx:id="accessoryTable" layoutX="14.0" layoutY="400.0" prefHeight="400.0" prefWidth="901.0" stylesheets="@tableStyling.css" />
+      <ChoiceBox fx:id="categorySelector" layoutX="54.0" layoutY="52.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="814.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mobile.shop.management.system.project.database.MobilePhonesWindowController">
+   <children>
+      <Label layoutX="117.0" layoutY="50.0" text="Select Company" />
+      <Label layoutX="348.0" layoutY="50.0" text="Select Model" />
+      <Label layoutX="531.0" layoutY="50.0" text="Bought Price" />
+      <Label layoutX="706.0" layoutY="50.0" text="Enter Sale Price" />
+      <JFXButton fx:id="addReceiptButton" buttonType="RAISED" layoutX="378.0" layoutY="166.0" onAction="#addToReceipt" prefHeight="62.0" prefWidth="173.0" ripplerFill="WHITE" style="-fx-background-color: #4db8ff;" text="Add to Receipt" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="117.0" layoutY="108.0" text="Customer Name" />
+      <JFXTextField fx:id="customerNameGetter" focusColor="#4db8ff" layoutX="219.0" layoutY="104.0" />
+      <Label layoutX="383.0" layoutY="108.0" text="Customer Mobile No" />
+      <JFXTextField fx:id="customerMobileNoGetter" focusColor="#4db8ff" layoutX="498.0" layoutY="104.0" />
+      <Label layoutX="116.0" layoutY="672.0" text="Total Amount" />
+      <Label fx:id="totalPriceLabel" layoutX="269.0" layoutY="672.0" text="500 Rs" />
+      <JFXButton fx:id="printReceiptButton" buttonType="RAISED" layoutX="747.0" layoutY="669.0" onAction="#printReceiptUpdateRecords" prefHeight="76.0" prefWidth="174.0" ripplerFill="WHITE" style="-fx-background-color: #4db8ff;" text="Print Receipt" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <ChoiceBox fx:id="companySelector" layoutX="85.0" layoutY="76.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="modelSelector" layoutX="303.0" layoutY="76.0" prefWidth="150.0" />
+      <Label fx:id="boughtPriceLabel" layoutX="551.0" layoutY="80.0" text="Label" />
+      <JFXTextField fx:id="salePriceGetter" layoutX="680.0" layoutY="68.0" />
+      <JFXTreeTableView fx:id="mobileReceiptTable" layoutX="14.0" layoutY="238.0" prefHeight="400.0" prefWidth="902.0" stylesheets="@tableStyling.css" />
+      <Label layoutX="666.0" layoutY="108.0" text="Customer CNIC" />
+      <JFXTextField fx:id="customerCNICGetter" layoutX="757.0" layoutY="104.0" />
+   </children>
+</AnchorPane>

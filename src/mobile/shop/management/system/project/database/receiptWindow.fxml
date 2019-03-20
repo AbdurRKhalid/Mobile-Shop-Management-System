@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="814.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mobile.shop.management.system.project.database.ReceiptWindowController">
+   <children>
+      <Label layoutX="79.0" layoutY="66.0" text="Select Item Type" />
+      <Label layoutX="326.0" layoutY="66.0" text="Select Model" />
+      <Label layoutX="509.0" layoutY="66.0" text="Stock Left" />
+      <Label fx:id="stockLabel" layoutX="519.0" layoutY="91.0" />
+      <Label layoutX="758.0" layoutY="66.0" text="Enter No of Units" />
+      <Label layoutX="608.0" layoutY="66.0" text="Price Per Unit" />
+      <Label fx:id="pricePerUnitLabel" layoutX="630.0" layoutY="91.0" />
+      <JFXButton fx:id="addToReceiptButton" buttonType="RAISED" layoutX="395.0" layoutY="186.0" onAction="#addItemsToReceipt" prefHeight="76.0" prefWidth="153.0" ripplerFill="WHITE" style="-fx-background-color: #4db8ff;" text="Add to Receipt" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="326.0" layoutY="129.0" text="Customer Name" />
+      <JFXTextField fx:id="noOfUnitGetter" focusColor="#4db8ff" layoutX="737.0" layoutY="87.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXTextField>
+      <JFXTextField fx:id="customerNameGetter" focusColor="#4db8ff" layoutX="513.0" layoutY="112.0" />
+      <Label layoutX="326.0" layoutY="169.0" text="Customer Mobile No" />
+      <JFXTextField fx:id="customerMobileNoGetter" focusColor="#4db8ff" layoutX="513.0" layoutY="152.0" />
+      <Label layoutX="106.0" layoutY="662.0" text="Total Amount" />
+      <Label fx:id="totalLabel" layoutX="259.0" layoutY="662.0" />
+      <Label layoutX="96.0" layoutY="697.0" text="Discount Amount" />
+      <JFXTextField fx:id="discountGetter" focusColor="#4db8ff" layoutX="209.0" layoutY="685.0" />
+      <Label layoutX="82.0" layoutY="732.0" text="Amount After Discount" />
+      <Label fx:id="afterDiscountLabel" layoutX="263.0" layoutY="732.0" />
+      <JFXButton fx:id="printReceiptButton" buttonType="RAISED" layoutX="737.0" layoutY="659.0" onAction="#printRceiptAndSaveData" prefHeight="76.0" prefWidth="174.0" ripplerFill="WHITE" style="-fx-background-color: #4db8ff;" text="Print Receipt" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXTreeTableView fx:id="receiptItemTable" layoutX="19.0" layoutY="271.0" prefHeight="374.0" prefWidth="886.0" stylesheets="@tableStyling.css" />
+      <ChoiceBox fx:id="categorySelector" layoutX="48.0" layoutY="87.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="modelSelector" layoutX="286.0" layoutY="87.0" prefWidth="150.0" />
+      <JFXButton fx:id="originalTotalButton" buttonType="RAISED" layoutX="94.0" layoutY="761.0" onAction="#actualTotalCalculation" prefHeight="39.0" prefWidth="230.0" ripplerFill="WHITE" style="-fx-background-color: #4db8ff;" text="Calculate Original Total" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="814.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mobile.shop.management.system.project.database.MobilePhonesStockWindowController">
+   <children>
+      <Label layoutX="168.0" layoutY="46.0" text="Select Company" />
+      <Label layoutX="356.0" layoutY="46.0" text="Enter Model" />
+      <JFXTextField fx:id="mobileModelGetter" focusColor="#4db8ff" layoutX="321.0" layoutY="63.0" />
+      <Label layoutX="506.0" layoutY="46.0" text="Enter Seller Name" />
+      <JFXTextField fx:id="sellerNameGetter" focusColor="#4db8ff" layoutX="486.0" layoutY="63.0" />
+      <Label layoutX="691.0" layoutY="46.0" text="Enter IMEI No" />
+      <JFXTextField fx:id="imeiNoGetter" focusColor="#4db8ff" layoutX="660.0" layoutY="63.0" />
+      <Label layoutX="245.0" layoutY="108.0" text="Price of Mobile" />
+      <JFXTextField fx:id="priceGetter" focusColor="#4db8ff" layoutX="218.0" layoutY="125.0" />
+      <Label layoutX="401.0" layoutY="108.0" text="Enter CNIC No of Seller" />
+      <JFXTextField fx:id="cnicNoGetter" focusColor="#4db8ff" layoutX="396.0" layoutY="125.0" />
+      <Label layoutX="575.0" layoutY="108.0" text="Enter Seller Address" />
+      <JFXTextField fx:id="addressGetter" focusColor="#4db8ff" layoutX="560.0" layoutY="125.0" />
+      <Label layoutX="98.0" layoutY="173.0" text="Select Date" />
+      <JFXDatePicker fx:id="dateGetter" defaultColor="#4db8ff" layoutX="221.0" layoutY="167.0" />
+      <Label layoutX="515.0" layoutY="180.0" text="Select Time" />
+      <JFXTimePicker fx:id="timeGetter" defaultColor="#4db8ff" layoutX="635.0" layoutY="166.0" />
+      <Label layoutX="245.0" layoutY="215.0" text="Select Condition" />
+      <JFXRadioButton fx:id="newConditionRadioButton" layoutX="389.0" layoutY="215.0" style="-jfx-selected-color: #4db8ff;" text="New">
+         <toggleGroup>
+            <ToggleGroup fx:id="condition_group" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="badConditionRadioButton" layoutX="499.0" layoutY="215.0" style="-jfx-selected-color: #4db8ff;" text="Bad" toggleGroup="$condition_group" />
+      <JFXRadioButton fx:id="normalConditionRadioButton" layoutX="589.0" layoutY="215.0" style="-jfx-selected-color: #4db8ff;" text="Normal" toggleGroup="$condition_group" />
+      <JFXRadioButton fx:id="goodConditionRadioButton" layoutX="695.0" layoutY="215.0" style="-jfx-selected-color: #4db8ff;" text="Good" toggleGroup="$condition_group" />
+      <JFXRadioButton fx:id="excellentConditionRadioButton" layoutX="795.0" layoutY="215.0" style="-jfx-selected-color: #4db8ff;" text="Excellent" toggleGroup="$condition_group" />
+      <JFXButton fx:id="addMobileStockButton" buttonType="RAISED" layoutX="397.0" layoutY="240.0" onAction="#addNewMobile" prefHeight="66.0" prefWidth="135.0" style="-fx-background-color: #4db8ff;" text="Add Mobile" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXRadioButton fx:id="searchByCompanyRadioButton" layoutX="98.0" layoutY="316.0" style="-jfx-selected-color: #4db8ff;" text="Search By Company">
+         <toggleGroup>
+            <ToggleGroup fx:id="mobilePhones_group" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="searchByImeiNoRadioButton" layoutX="251.0" layoutY="316.0" style="-jfx-selected-color: #4db8ff;" text="Search By IMEI No" toggleGroup="$mobilePhones_group" />
+      <JFXRadioButton fx:id="searchByModelRadioButton" layoutX="408.0" layoutY="316.0" style="-jfx-selected-color: #4db8ff;" text="Search By Model" toggleGroup="$mobilePhones_group" />
+      <JFXRadioButton fx:id="searchByCnicRadioButton" layoutX="554.0" layoutY="316.0" style="-jfx-selected-color: #4db8ff;" text="Search By CNIC No" toggleGroup="$mobilePhones_group" />
+      <JFXRadioButton fx:id="searchBySellerNameRadioButton" layoutX="729.0" layoutY="316.0" style="-jfx-selected-color: #4db8ff;" text="Search By Seller Name" toggleGroup="$mobilePhones_group" />
+      <Label layoutX="410.0" layoutY="339.0" text="Enter Text to Search" />
+      <JFXTextField fx:id="searchTextMobileRecord" focusColor="#4db8ff" layoutX="342.0" layoutY="356.0" prefHeight="25.0" prefWidth="252.0" />
+      <JFXButton fx:id="searchButtonMobileRecord" buttonType="RAISED" layoutX="401.0" layoutY="389.0" onAction="#searchMobileRecord" prefHeight="48.0" prefWidth="124.0" ripplerFill="WHITE" style="-fx-background-color: #4db8ff;" text="Search" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXTreeTableView fx:id="mobileRecordTable" layoutX="10.0" layoutY="445.0" prefHeight="360.0" prefWidth="909.0" stylesheets="@tableStyling.css" />
+      <ChoiceBox fx:id="companySelector" layoutX="136.0" layoutY="63.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
