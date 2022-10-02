@@ -7,3 +7,6 @@ This project contais the code for the Mobile Management System, and it has been 
 ## Technologies Used
 ![Java](https://img.shields.io/badge/-java-E34A86?style=flat-square&logo=java)
 ![MySQL](https://img.shields.io/badge/-MySQL-black?style=flat-square&logo=mysql)
+
+## Description of Queries File
+The 'Database - Project Queries.sql' file contais all the basic queries that have been used for the Different kind of Views, and Procedure Creation.
